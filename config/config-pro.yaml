@@ -1,0 +1,26 @@
+mysql:
+  enable: true
+  host: 110.40.150.61
+  port: 3346
+  user: root
+  password: fshing
+  database: financial_mobile
+  charset: utf8mb4 # 要支持完整的UTF-8编码,需设置成: utf8mb4
+  parseTime: true # 解析time.Time类型
+  timeZone: Asia%2fShanghai # 时区,若设置 Asia/Shanghai,需写成: Asia%2fShanghai,默认Local
+  tablePrefix: "m_" #表前缀
+  defaultStringSize: 255 # string 类型字段的默认长度
+  disableDatetimePrecision: true # 禁用 datetime 精度，MySQL 5.6 之前的数据库不支持
+  skipInitializeWithVersion: false # 根据当前 MySQL 版本自动配置
+  autoMigrate: true # 开启时，每次服务启动都会根据实体创建/更新表结构
+  slowSql: 5ms # 慢sql时间。单位毫秒
+  logLevel: info # error、info、warn
+  ignoreRecordNotFoundError: true # 是否忽略ErrRecordNotFound(未查到记录错误)
+redis:
+  addr: "110.40.150.61:6389"
+  password: "fshing"
+  db: 0
+jwt:
+  secret: wA77:r?tU1K:nz,yfGN8 # jwt密钥
+  issuer: fshing # 签发人
+  expire: 3h # 有效时间，3小时

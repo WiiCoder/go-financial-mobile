@@ -1,0 +1,9 @@
+kind: reverse
+name: mydb
+source:
+  database: mysql
+  conn_str: 'root:fshing@tcp(110.40.150.61:3346)/ys_reader?parseTime=true&charset=utf8mb4'
+targets:
+  - type: codes
+    language: golang
+    output_dir: ./model
