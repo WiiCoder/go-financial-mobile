@@ -25,6 +25,8 @@ func main() {
 		panic(err)
 	}
 
+	// redis := cache.NewRedis()
+
 	gin.DisableConsoleColor() // 禁用控制台颜色
 
 	router := gin.Default()
